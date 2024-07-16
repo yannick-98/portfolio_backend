@@ -22,6 +22,7 @@ from portfolio.views import PredecirView, HelloWorldView, ChartView, GetPriceVie
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path('api/', include('blog.urls')),
     path('api/getHousePrice/', GetPriceView.as_view(), name='getHousePrice'),
     path('api/news/', NewsView.as_view(), name='news'),
     path('api/predecir/', PredecirView.as_view(), name='predecir'),
